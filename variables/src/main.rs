@@ -1,16 +1,29 @@
 fn main() {
-    let tup = (500, 6.4, 1);
-    println!("The value of first element is: {}", tup.0);
-    println!("The value of second element is: {}", tup.1);
-    println!("The value of third element is: {}", tup.2);
+    // let condition = true;
 
-    let (x, y, z) = tup;
-    println!("The value of first element is: {}", x);
-    println!("The value of second element is: {}", y);
-    println!("The value of third element is: {}", z);
+    // if condition {
+    //     5
+    // } else {
+    //     "six"
+    // }; //wtf is rust why does this return an error.
+    //they aren't being tied to a variable.
 
-    let array = [1, 2, 3, 4, 5];
-    for value in array {
-        println!("{}", value);
+    let mut count = 0;
+    'counting_up: while count < 10 {
+        println!("count = {count}");
+        let mut remaining = 10;
+        while remaining > 5 {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break 'counting_up;
+            }
+            if count == 5 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
     }
+    println!("End count = {count}");
 }
