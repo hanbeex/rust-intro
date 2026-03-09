@@ -1,7 +1,8 @@
 fn main() {
-    let mut s = String::from("hello");
-    s.push_str(", world!");
-    println!("{s}");
+    let s = String::from("hello");
+    println!("{}", return_borrowed(&s));
+}
 
-    let s2 = s;
+fn return_borrowed(s: &str) -> &str {
+    s
 }
