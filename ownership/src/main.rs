@@ -1,8 +1,10 @@
 fn main() {
-    let s = String::from("hello");
-    println!("{}", return_borrowed(&s));
+    let s = String::from("Hello, world!");
+
+    return_borrowed(s);
+    println!("{}", s);
 }
 
-fn return_borrowed(s: &str) -> &str {
-    s
+fn return_borrowed(x: String) -> String {
+    x
 }
